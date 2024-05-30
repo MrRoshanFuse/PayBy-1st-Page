@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
    
-   <link href="enc/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <!-- <link href="enc/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+   <link href="enc/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
     	<meta charset="UTF-8" />
     	<meta name="viewport" content="width=device-width, initial-scale=1.0" />   
 	    <meta HTTP-EQUIV="Cache-Control" CONTENT="no cache">
@@ -93,7 +94,7 @@
       }
 .btn {   
         width: 94%;
-        font-size:16px;
+        font-size:1.2em;
         border-radius:10px;  
         position:fixed;
         color: #f5f6f7;
@@ -103,9 +104,9 @@
         left: 3%;
         right: 3%;
         height: 56px;
-	   padding: 16px;
-	   align-items: center;
-	   align-self: stretch;
+	padding: 16px;
+	align-items: center;
+	align-self: stretch;
         bottom: 16px;
         font-family:'SF Pro';
       }
@@ -122,7 +123,7 @@
         }
         #closeButton{
            float:right;           
-           font-size: 25px;
+           font-size: 30px;
            cursor: pointer;
            outline: inherit;
            color:#000;
@@ -139,6 +140,46 @@
         margin:0px 16px       
     }
 /* ADDED ON 08SEP22 BY MAMTA TOP LOGO */
+@media screen and (max-width:3000px) {
+        .logoLeft {
+            height: 25px;
+        }
+        .logoRight {
+            height: 25px;
+        }
+    }
+@media screen and (max-width:2300px) {
+        .logoLeft {
+            height: 25px;
+        }
+        .logoRight {
+            height: 25px;
+        }
+    }
+@media screen and (max-width:1900px) {
+        .logoLeft {
+            height: 25px;
+        }
+        .logoRight {
+            height: 25px;
+        }
+    }
+@media screen and (max-width:1500px) {
+        .logoLeft {
+            height: 25px;
+        }
+        .logoRight {
+            height: 25px;
+        }
+    }
+@media screen and (max-width:1100px) {
+        .logoLeft {
+            height: 25px;
+        }
+        .logoRight {
+            height: 25px;
+        }
+    }
 @media screen and (max-width:1050px) {
         .logoLeft {
             height: 30px;
@@ -197,6 +238,16 @@
         }
         .logoRight {
             height: 12px;
+            
+        }
+    }
+    @media screen and (max-width:200px) {
+        .logoLeft {
+            height: 10px;
+            
+        }
+        .logoRight {
+            height: 10px;
             
         }
     }
@@ -354,7 +405,22 @@
 .height-100 {
          height: 100vh;
           }
-    </style>   
+    </style>  
+    
+<script>
+function moveToNext(currentInput, nextInputId) {
+    // Get the value of the current input
+    var inputValue = currentInput.value;
+    
+    // Move to the next input field if the current input is not empty
+    
+      if (nextInputId) {
+        var nextInput = document.getElementById(nextInputId);
+        nextInput.disabled = false;
+        nextInput.focus();
+      }
+    }
+</script>
 
  </head>
 <body onload="body(); f1()" class="content"> 
@@ -386,8 +452,8 @@
           <input type="password" min="1" max="1" name="input6" value=""  class="input"/>
         </div>   -->
                         
-<div id="otp"  class="otpInput mt-2 inputs d-flex flex-row justify-content-center input"> 
-	<input class="m-2 text-center form-control" name="input1" type="password" id="first" maxlength="1" inputmode="numeric"  onkeyup="moveToNext(this, 'second')"/> 
+<div  id="otp"  class="otpInput mt-2 inputs d-flex flex-row justify-content-center input"> 
+<input class="m-2 text-center form-control" name="input1" type="password" id="first" maxlength="1" inputmode="numeric"  onkeyup="moveToNext(this, 'second')"/> 
 <input class="m-2 text-center form-control" name="input2" type="password" id="second" maxlength="1" inputmode="numeric"  disabled onkeyup="moveToNext(this, 'third')" > 
 <input class="m-2 text-center form-control" name="input3" type="password" id="third" maxlength="1" inputmode="numeric" disabled onkeyup="moveToNext(this, 'fourth')">
 <input class="m-2 text-center form-control"  name="input4" type="password" id="fourth" maxlength="1" inputmode="numeric"  disabled onkeyup="moveToNext(this, 'fifth')"> 
@@ -411,4 +477,3 @@
      </form> 
   </body>
 </html>
-
